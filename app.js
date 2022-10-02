@@ -6,8 +6,8 @@ const operationbox = document.getElementById("Type");
 const textspace = document.getElementById("result");
 
 //Divs for Input1 numbers buttons and Input2 numbers buttons
-const NumbersVal1Buttons = document.querySelector(".NumbersVAL1")
-const NumbersVal2Buttons = document.querySelector(".NumbersVAL2")
+const NumbersVal1Buttons = document.querySelector(".buttons1")
+const NumbersVal2Buttons = document.querySelector(".buttons2")
 
 //Operations Buttons
 const btnCalcu = document.getElementById("btnCalcular");
@@ -44,32 +44,45 @@ const NumbersToVal2ButtonsHide = () => {
 
 //Type of operations - who adds text inside operation input and adds the text into result text - Functions
 PlusBtn.addEventListener('click', () =>{
-    operationbox.value  = " + "
-    OperatorText.innerText = operationbox.value
-    NumbersToVal1ButtonstHide()
+    let ValueofOperation = ""
+
+    operationbox.value  = "+"
+    ValueofOperation += operationbox.value
+    console.log(ValueofOperation)
+
+    if(ValueofOperation.length <= 1){
+      textspace.innerText += operationbox.value
+      NumbersToVal1ButtonstHide()
+      ValueofOperation=false
+    }else{
+      console.log('oa')
+    }
+
 });
 MinusBtn.addEventListener('click', () =>{
-    operationbox.value  = " - "
-    OperatorText.innerText = operationbox.value
+    operationbox.value  = "-"
+    textspace.innerText += operationbox.value
     NumbersToVal1ButtonstHide()
 });
 MultiBtn.addEventListener('click', () =>{
-    operationbox.value  = " * "
-    OperatorText.innerText = operationbox.value
+    operationbox.value  = "*"
+    textspace.innerText += operationbox.value
     NumbersToVal1ButtonstHide()
 });
 DivideBtn.addEventListener('click', () =>{
-    operationbox.value  = " / "
-    OperatorText.innerText = operationbox.value
+    operationbox.value  = "/"
+    textspace.innerText += operationbox.value
     NumbersToVal1ButtonstHide()
 });
 
 //Functions for button to add dots on Op1 or Op2 inputs
 dotBtn1.addEventListener('click', () => {
     Value1Box.value += "."
+    textspace.innerText += "."
 })
 dotBtn2.addEventListener('click', () => {
     Value2Box.value += "."
+    textspace.innerText += "."
 })
 
 btnCalcu.addEventListener("click", (e) => {
@@ -78,7 +91,6 @@ btnCalcu.addEventListener("click", (e) => {
   let op2 = Value2Box.value
   let operation = operationbox.value
   let resultado;
-  let operationtext
 
   //Valicación si el op1 y op2 son números enteros o contienen decimal
     if(op1.includes('.')){
@@ -105,33 +117,29 @@ btnCalcu.addEventListener("click", (e) => {
       }
 }
 
-  if(operation === " + " || operation === " - " || operation === " * " || operation === " / " && typeof(operation) === 'string') {
+  if(operation === "+" || operation === "-" || operation === "*" || operation === "/" && typeof(operation) === 'string') {
     console.log(operation)
     if(typeof(op1) === 'number' && typeof(op2) === 'number' || typeof(op1) === 'float' && typeof(op2) === 'float'){
         console.log(op1,op2)
        switch (operation) {
-            case " + ":
+            case "+":
               resultado = op1 + op2;
-              operationtext = `${op1} + ${op2}`
               console.log(resultado)
               break;
-            case " - ":
+            case "-":
                resultado = op1 - op2;
-               operationtext = `${op1} - ${op2}`
               console.log(resultado)
               break;
-           case " * ":
+           case "*":
               resultado = op1 * op2;
-              operationtext = `${op1} * ${op2}`
               console.log(resultado)
              break;
-            case " / ":
+            case "/":
               resultado = op1 / op2;
-              operationtext = `${op1} / ${op2}`
               console.log(resultado)
               break;
           }
-          if(resultado < 0){
+          if(resultado <= 0){
            resultado = 0;
        }
           Val1Text.innerText = ''
@@ -168,9 +176,9 @@ btnCleanInput.addEventListener('click', () => {
 })
 
 btnResetAll.addEventListener('click', () =>{
-    textspace.innerText = ' '
-    Value1Box.value = ''
+    textspace.innerText = ''
     Value2Box.value = ''
     operationbox.value = ''
+    Value1Box.value = ''
 })
 
