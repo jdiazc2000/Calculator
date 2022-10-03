@@ -17,13 +17,14 @@ const MultiBtn = document.getElementById('*value');
 const DivideBtn = document.getElementById('/value');
 const dotBtn1 = document.getElementById('.value1')
 const dotBtn2 = document.getElementById('.value2')
-const btnCleanInput = document.getElementById("clearinput")
-const btnResetAll = document.getElementById("ResetAllData")
+const btnCleanInput = document.querySelector(".clearinput")
+const btnResetAll = document.querySelector(".ResetAllData")
 
 //Values and operator texts
 const Val1Text = document.getElementById('val1_text')
 const OperatorText = document.getElementById('operator_text')
 const Val2Text = document.getElementById('val2_text')
+
 
 //Boolean who is created to difference if DEL button will clean the last character on input1 or input2 
 let Numbers1buttons = true
@@ -72,6 +73,10 @@ dotBtn1.addEventListener('click', () => {
 dotBtn2.addEventListener('click', () => {
     Value2Box.value += "."
     textspace.innerText += "."
+})
+
+textspace.addEventListener('keyup', () =>{
+  console.log('key')
 })
 
 const CalcularFnct = () => {
@@ -130,11 +135,10 @@ const CalcularFnct = () => {
           if(resultado <= 0){
            resultado = 0;
        }
-    
           Value1Box.value  = resultado
           Value2Box.value  = ''
           operationbox.value = ''
-
+        
           textspace.innerText = resultado;
 
           NumbersToVal2ButtonsHide()
@@ -165,5 +169,6 @@ btnResetAll.addEventListener('click', () =>{
     Value2Box.value = ''
     operationbox.value = ''
     Value1Box.value = ''
+    NumbersToVal2ButtonsHide()
 })
 
