@@ -7,6 +7,10 @@
   font-family: Arcade;
 }
 
+.calculator-box{
+  visibility: none;
+}
+
 #calculator-container{
   height: 95vh;
   width: 1000px;
@@ -139,4 +143,7 @@ input {
   margin: 0 0 10px 0;
 }
 
+#buttons2{
+  display: none;
+}
 

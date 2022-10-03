@@ -44,20 +44,9 @@ const NumbersToVal2ButtonsHide = () => {
 
 //Type of operations - who adds text inside operation input and adds the text into result text - Functions
 PlusBtn.addEventListener('click', () =>{
-    let ValueofOperation = ""
-
-    operationbox.value  = "+"
-    ValueofOperation += operationbox.value
-    console.log(ValueofOperation)
-
-    if(ValueofOperation.length <= 1){
+      operationbox.value  = "+"
       textspace.innerText += operationbox.value
       NumbersToVal1ButtonstHide()
-      ValueofOperation=false
-    }else{
-      console.log('oa')
-    }
-
 });
 MinusBtn.addEventListener('click', () =>{
     operationbox.value  = "-"
@@ -85,8 +74,7 @@ dotBtn2.addEventListener('click', () => {
     textspace.innerText += "."
 })
 
-btnCalcu.addEventListener("click", (e) => {
-  e.preventDefault();
+const CalcularFnct = () => {
   let op1 = Value1Box.value
   let op2 = Value2Box.value
   let operation = operationbox.value
@@ -108,7 +96,7 @@ btnCalcu.addEventListener("click", (e) => {
     if(op2.includes('.')){
     op2 = parseFloat(Value2Box.value);
     console.log('op2 convertidos a Float')
-}else{
+  }else{
     if(op2 != ''){
         op2 = parseInt(Value2Box.value);
         console.log('op2 convertidos a Int')
@@ -142,9 +130,6 @@ btnCalcu.addEventListener("click", (e) => {
           if(resultado <= 0){
            resultado = 0;
        }
-          Val1Text.innerText = ''
-          Val2Text.innerText = ''
-          OperatorText.innerText = ''
     
           Value1Box.value  = resultado
           Value2Box.value  = ''
@@ -160,7 +145,7 @@ btnCalcu.addEventListener("click", (e) => {
   } else {
     alert("Error en el calculo, por favor revisar los campos ingresados.");
   }
-});
+};
 
 btnCleanInput.addEventListener('click', () => {
     if(Numbers1buttons){
