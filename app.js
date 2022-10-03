@@ -25,7 +25,6 @@ const Val1Text = document.getElementById('val1_text')
 const OperatorText = document.getElementById('operator_text')
 const Val2Text = document.getElementById('val2_text')
 
-
 //Boolean who is created to difference if DEL button will clean the last character on input1 or input2 
 let Numbers1buttons = true
 

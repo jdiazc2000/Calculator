@@ -8,66 +8,70 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
-    <div id="calculator-container">
-      <div class="result-container"> 
-        <div class="ClearANDResetDiv">
-          <button class="clearinput">Cle</button>
-          <button class="ResetAllData">Res</button>
-        </div>
-          <h1 id="result"></h1>
+<div id="center">
+  <div id="calculator-container">
+    <div class="result-container"> 
+      <div class="ClearANDResetDiv">
+        <button class="clearinput">Cle</button>
+        <button class="ResetAllData">Res</button>
       </div>
-        <div class="parent">
-          <div class="buttons1">
-          <div class="div1 NbrBtn"><button onclick="Value1Box.value += 1,textspace.innerText += 1">1</button></div>
-          <div class="div2 NbrBtn"><button onclick="Value1Box.value += 4, textspace.innerText += 4">4</button></div>
-          <div class="div3 NbrBtn"><button onclick="Value1Box.value += 7, textspace.innerText += 7">7</button> </div>
-          <div class="div4 NbrBtn"><button onclick="CalcularFnct()">=</button></div>
-          <div class="div5 NbrBtn"><button onclick="Value1Box.value += 0, textspace.innerText += 0">0</button></div>
-          <div class="div6 NbrBtn"><button onclick="Value1Box.value += 8, textspace.innerText += 8">8</button></div>
-          <div class="div7 NbrBtn"><button onclick="Value1Box.value += 5, textspace.innerText += 5">5</button> </div>
-          <div class="div8 NbrBtn"><button onclick="Value1Box.value += 2, textspace.innerText += 2">2</button></div>
-          <div class="div9 NbrBtn"><button  onclick="Value1Box.value += 3, textspace.innerText += 3">3</button> </div>
-          <div class="div10 NbrBtn"><button onclick="Value1Box.value += 6, textspace.innerText += 6">6</button></div>
-          <div class="div11 NbrBtn"><button onclick="Value1Box.value += 9, textspace.innerText += 9">9</button></div>
-          <div class="div12 NbrBtn"><button id=".value1">.</button></div>
-          <div class="div13 NbrBtn"><button id="/value">/</button></div>
-          <div class="div14 NbrBtn"><button id="*value">X</button></div>
-          <div class="div15 NbrBtn"><button id="-value">-</button></div>
-          <div class="div16 NbrBtn"><button id="+value">+</button></div>
-        </div>
-
-        <div class="buttons2">
-          <div class="div1 NbrBtn"><button onclick="Value2Box.value += 1, textspace.innerText += 1">1</button></div>
-          <div class="div2 NbrBtn"><button onclick="Value2Box.value += 4, textspace.innerText += 4">4</button></div>
-          <div class="div3 NbrBtn"><button  onclick="Value2Box.value += 7, textspace.innerText += 7">7</button></div>
-          <div class="div4 NbrBtn"><button onclick="CalcularFnct()">=</button></div>
-          <div class="div5 NbrBtn"><button  onclick="Value2Box.value += 0, textspace.innerText += 0">0</button></div>
-          <div class="div6 NbrBtn"><button  onclick="Value2Box.value += 8, textspace.innerText += 8">8</button></div>
-          <div class="div7 NbrBtn"><button onclick="Value2Box.value += 5, textspace.innerText += 5">5</button></div>
-          <div class="div8 NbrBtn"><button onclick="Value2Box.value += 2, textspace.innerText += 2">2</button></div>
-          <div class="div9 NbrBtn"><button  onclick="Value2Box.value += 3, textspace.innerText += 3">3</button> </div>
-          <div class="div10 NbrBtn"><button onclick="Value2Box.value += 6, textspace.innerText += 6">6</button></div>
-          <div class="div11 NbrBtn"><button onclick="Value2Box.value += 9, textspace.innerText += 9">9</button></div>
-          <div class="div12 NbrBtn"><button id=".value2">.</button></div>
-          <div class="div13 NbrBtn"><button id="/value">/</button></div>
-          <div class="div14 NbrBtn"><button id="*value">X</button></div>
-          <div class="div15 NbrBtn"><button id="-value">-</button></div>
-          <div class="div16 NbrBtn"><button id="+value">+</button></div>
-        </div>
+        <h1 id="result"></h1>
+    </div>
+      <div class="parent">
+        <div class="buttons1">
+        <div class="div1 NbrBtn"><button onclick="Value1Box.value += 1,textspace.innerText += 1">1</button></div>
+        <div class="div2 NbrBtn"><button onclick="Value1Box.value += 4, textspace.innerText += 4">4</button></div>
+        <div class="div3 NbrBtn"><button onclick="Value1Box.value += 7, textspace.innerText += 7">7</button> </div>
+        <div class="div4 NbrBtn"><button onclick="CalcularFnct()">=</button></div>
+        <div class="div5 NbrBtn"><button onclick="Value1Box.value += 0, textspace.innerText += 0">0</button></div>
+        <div class="div6 NbrBtn"><button onclick="Value1Box.value += 8, textspace.innerText += 8">8</button></div>
+        <div class="div7 NbrBtn"><button onclick="Value1Box.value += 5, textspace.innerText += 5">5</button> </div>
+        <div class="div8 NbrBtn"><button onclick="Value1Box.value += 2, textspace.innerText += 2">2</button></div>
+        <div class="div9 NbrBtn"><button  onclick="Value1Box.value += 3, textspace.innerText += 3">3</button> </div>
+        <div class="div10 NbrBtn"><button onclick="Value1Box.value += 6, textspace.innerText += 6">6</button></div>
+        <div class="div11 NbrBtn"><button onclick="Value1Box.value += 9, textspace.innerText += 9">9</button></div>
+        <div class="div12 NbrBtn"><button id=".value1">.</button></div>
+        <div class="div13 NbrBtn"><button id="/value">/</button></div>
+        <div class="div14 NbrBtn"><button id="*value">X</button></div>
+        <div class="div15 NbrBtn"><button id="-value">-</button></div>
+        <div class="div16 NbrBtn"><button id="+value">+</button></div>
       </div>
 
-    <div class="calculator-box" style="display: none;">
-      <div id="calculator">
-        <div class="inputs">
-          <input type="text" id="Val1" placeholder="Valor 1" title="Val1_box" />
-          <input type="text" id="Type" title="Type_box"/>
-          <input type="text" id="Val2" placeholder="Valor 2" title="Val2_box"/>
-        </div>
-        <button id="clearinput">DEL</button>
-        <button id="ResetAllData">RESET</button>
+      <div class="buttons2">
+        <div class="div1 NbrBtn"><button onclick="Value2Box.value += 1, textspace.innerText += 1">1</button></div>
+        <div class="div2 NbrBtn"><button onclick="Value2Box.value += 4, textspace.innerText += 4">4</button></div>
+        <div class="div3 NbrBtn"><button  onclick="Value2Box.value += 7, textspace.innerText += 7">7</button></div>
+        <div class="div4 NbrBtn"><button onclick="CalcularFnct()">=</button></div>
+        <div class="div5 NbrBtn"><button  onclick="Value2Box.value += 0, textspace.innerText += 0">0</button></div>
+        <div class="div6 NbrBtn"><button  onclick="Value2Box.value += 8, textspace.innerText += 8">8</button></div>
+        <div class="div7 NbrBtn"><button onclick="Value2Box.value += 5, textspace.innerText += 5">5</button></div>
+        <div class="div8 NbrBtn"><button onclick="Value2Box.value += 2, textspace.innerText += 2">2</button></div>
+        <div class="div9 NbrBtn"><button  onclick="Value2Box.value += 3, textspace.innerText += 3">3</button> </div>
+        <div class="div10 NbrBtn"><button onclick="Value2Box.value += 6, textspace.innerText += 6">6</button></div>
+        <div class="div11 NbrBtn"><button onclick="Value2Box.value += 9, textspace.innerText += 9">9</button></div>
+        <div class="div12 NbrBtn"><button id=".value2">.</button></div>
+        <div class="div13 NbrBtn"><button id="/value">/</button></div>
+        <div class="div14 NbrBtn"><button id="*value">X</button></div>
+        <div class="div15 NbrBtn"><button id="-value">-</button></div>
+        <div class="div16 NbrBtn"><button id="+value">+</button></div>
       </div>
     </div>
+
+  <div class="calculator-box" style="display: none;">
+    <div id="calculator">
+      <div class="inputs">
+        <input type="text" id="Val1" placeholder="Valor 1" title="Val1_box" />
+        <input type="text" id="Type" title="Type_box"/>
+        <input type="text" id="Val2" placeholder="Valor 2" title="Val2_box"/>
+      </div>
+      <button id="clearinput">DEL</button>
+      <button id="ResetAllData">RESET</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
 
     <script src="app.js"></script>
   </body>
