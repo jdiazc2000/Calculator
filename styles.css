@@ -77,14 +77,18 @@
   color: #fff;
   font-family: Arcade;
   font-size: 50px;
-  line-height: 100%;
+  line-height: 60%;
   text-align: right;
   width: 100%;
-  margin-top: 25px;
+
   word-break: break-all;
   word-wrap: break-word;
   text-shadow: 0px 2px 7px #000000;
-  margin-left: -5rem;
+
+  margin-top: 25px;
+  margin-right: 0.5rem;
+  margin-left: 5px;
+  margin-bottom: 1rem;
 }
 
 #calculator {
